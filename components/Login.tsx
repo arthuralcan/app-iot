@@ -1,19 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, ScrollView, Image, Button, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons'; 
 import { ImageBackground } from 'react-native';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBVShXp6I6PP2qCioGUQlT-fyV-RKjAeNI",
+  authDomain: "gurjao-conect.firebaseapp.com",
+  databaseURL: "https://gurjao-conect-default-rtdb.firebaseio.com",
+  projectId: "gurjao-conect",
+  storageBucket: "gurjao-conect.appspot.com",
+  messagingSenderId: "693662784767",
+  appId: "1:693662784767:web:41672ca269d2d3abd6c0ca",
+  measurementId: "G-3XKNCW43EZ"
+};
 
-
-
-const App = (): JSX.Element => {
+const Login = (): JSX.Element => {
   
   return (
-    
-   
     <ScrollView style={styles.scrollView} contentContainerStyle={styles.container}>
 
        <ImageBackground
@@ -52,7 +57,7 @@ const App = (): JSX.Element => {
             // validar os dados de login
           }}
         >
-          <Text style={styles.buttonText}>FAZER LOGIN</Text>
+          <Text style={styles.buttonText}>Fazer Login</Text>
         </TouchableOpacity>
 
         <Text
@@ -92,7 +97,7 @@ const App = (): JSX.Element => {
             }}
           >
             
-            <AntDesign name="google" size={24} color="white" />
+            <AntDesign name="google" size={28} color="white" />
 
             <Text style={styles.buttonText}>Google</Text>
           </TouchableOpacity>
@@ -121,9 +126,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   loginOptionButton: {
-    backgroundColor: '#00A6CF',
+    backgroundColor: '#1566E0',
     borderRadius: 20,
-    paddingVertical: 5,
+    paddingVertical: 15,
     flex: 1,
     marginHorizontal: 10,
     alignItems: 'center',
@@ -148,13 +153,13 @@ const styles = StyleSheet.create({
   cardView: {
     backgroundColor: '#ffffff',
     borderRadius: 30,
-    padding: 25,
+    padding: 24,
     marginHorizontal: 40,
-    marginVertical: 12,
-    elevation: 10,
+    marginVertical: 15,
+    elevation: 5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.35,
+    shadowOpacity: 0.25,
     shadowRadius: 3.84,
   },
   
@@ -181,28 +186,24 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     fontSize: 14,
-  
   },
   acessarButton: {
     backgroundColor: '#1566E0',
     borderRadius: 20,
     paddingVertical: 15,
-    marginLeft: 13,
-    marginRight: 13,
     marginTop: 20,
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   esqueceuSenha: {
     textAlign: 'center',
     marginTop: 10,
     color: '#1566E0',
-    fontSize: 10,
-    fontWeight: 'bold',
+    fontSize: 12,
   },
   imageView7: {
     width: 100,
@@ -215,4 +216,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Login;
