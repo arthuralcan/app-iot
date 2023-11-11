@@ -5,17 +5,6 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons'; 
 import { ImageBackground } from 'react-native';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBVShXp6I6PP2qCioGUQlT-fyV-RKjAeNI",
-  authDomain: "gurjao-conect.firebaseapp.com",
-  databaseURL: "https://gurjao-conect-default-rtdb.firebaseio.com",
-  projectId: "gurjao-conect",
-  storageBucket: "gurjao-conect.appspot.com",
-  messagingSenderId: "693662784767",
-  appId: "1:693662784767:web:41672ca269d2d3abd6c0ca",
-  measurementId: "G-3XKNCW43EZ"
-};
-
 const Login = (): JSX.Element => {
   
   return (
